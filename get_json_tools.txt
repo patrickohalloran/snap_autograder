@@ -1,0 +1,7 @@
+stringVersion = JSONtoString(JSONscript(world.children[0].sprites.contents[0].scripts.children[0]))
+
+customStringVersion = JSONtoString(JSONcustomBlock(world.children[0].sprites.contents[0].scripts.children[0]))
+
+blockJSONified = JSONscript(world.children[0].sprites.contents[0].scripts.children[0])[0]
+
+scriptJSONified = JSONscript(world.children[0].sprites.contents[0].scripts.children[0])
