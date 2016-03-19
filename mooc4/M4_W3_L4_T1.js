@@ -277,105 +277,105 @@ function AGTest(outputLog) {
 
 
 
-        var blockName_3 = "display nicely %";
-    var chunk_3 = fb.newChunk('Complete the "' + blockName_3 + '" block.');
+    // var blockName_3 = "display nicely %";
+    // var chunk_3 = fb.newChunk('Complete the "' + blockName_3 + '" block.');
 
-    var blockExists_2 = function () {
-        return spriteContainsBlock(blockName_3);
-    }
+    // var blockExists_3 = function () {
+    //     return spriteContainsBlock(blockName_3);
+    // }
 
-    var tip_3_1 = chunk_3.newTip('Make sure you name your block exactly "' + blockName_3 + '" and place it in the scripting area.',
-        'The "' + blockName_3 + '" block exists.');
+    // var tip_3_1 = chunk_3.newTip('Make sure you name your block exactly "' + blockName_3 + '" and place it in the scripting area.',
+    //     'The "' + blockName_3 + '" block exists.');
 
-    tip_3_1.newAssertTest(
-        blockExists_2,
-        'Testing if the "' + blockName_3 + '" block is in the scripting area.',
-        'The "' + blockName_3 + '" block is in the scripting area.',
-        'Make sure you name your block exactly "' + blockName_3 + '" and place it in the scripting area.',
-        1
-    );
+    // tip_3_1.newAssertTest(
+    //     blockExists_3,
+    //     'Testing if the "' + blockName_3 + '" block is in the scripting area.',
+    //     'The "' + blockName_3 + '" block is in the scripting area.',
+    //     'Make sure you name your block exactly "' + blockName_3 + '" and place it in the scripting area.',
+    //     1
+    // );
 
-    var tip_3_2 = chunk_3.newTip(
-        'Your block should return the correct values for the given general inputs.',
-        'Great job! Your block reports the correct value for given inputs.'
-    );
+    // var tip_3_2 = chunk_3.newTip(
+    //     'Your block should return the correct values for the given general inputs.',
+    //     'Great job! Your block reports the correct value for given inputs.'
+    // );
 
-    var input_3_2_1 = [1, 5, 7, 10];
-    tip_3_2.newIOTest('r',  // testClass
-        blockName_3,          // blockSpec
-        input_3_2_1,        // input
-        function (output) {
-            // Output should be a list of numbers.
-            var expected,
-                actual;
-            console.log(output);
+    // var input_3_2_1 = [1, 5, 7, 10];
+    // tip_3_2.newIOTest('r',  // testClass
+    //     blockName_3,          // blockSpec
+    //     input_3_2_1,        // input
+    //     function (output) {
+    //         // Output should be a list of numbers.
+    //         var expected,
+    //             actual;
+    //         console.log(output);
 
-            expected = "1, 5, 7, 10";
-            actual = output;
-            if (!_.isEqual(actual, expected)) {
-                tip_3_2.suggestion = 'The output should be ' + expected + ';';
-                tip_3_2.suggestion += ' but was ' + actual + '.';
-                return false;
-            }
-            return true;
-        },
-        4 * 1000, // 4 second time out.
-        true, // is isolated
-        1 // points
-    );
+    //         expected = "1, 5, 7, 10";
+    //         actual = output;
+    //         if (!_.isEqual(actual, expected)) {
+    //             tip_3_2.suggestion = 'The output should be ' + expected + ';';
+    //             tip_3_2.suggestion += ' but was ' + actual + '.';
+    //             return false;
+    //         }
+    //         return true;
+    //     },
+    //     4 * 1000, // 4 second time out.
+    //     true, // is isolated
+    //     1 // points
+    // );
 
-    var input_3_2_2 = [1];
-    tip_3_2.newIOTest('r',  // testClass
-        blockName_3,          // blockSpec
-        input_3_2_2,        // input
-        function (output) {
-            // Output should be a list of numbers.
-            var expected,
-                actual;
-            console.log(output);
+    // var input_3_2_2 = [1];
+    // tip_3_2.newIOTest('r',  // testClass
+    //     blockName_3,          // blockSpec
+    //     input_3_2_2,        // input
+    //     function (output) {
+    //         // Output should be a list of numbers.
+    //         var expected,
+    //             actual;
+    //         console.log(output);
 
-            expected = "1";
-            actual = output;
-            if (!_.isEqual(actual, expected)) {
-                tip_3_2.suggestion = 'The output should be ' + expected + ';';
-                tip_3_2.suggestion += ' but was ' + actual + '.';
-                return false;
-            }
-            return true;
-        },
-        4 * 1000, // 4 second time out.
-        true, // is isolated
-        1 // points
-    );
+    //         expected = "1";
+    //         actual = output;
+    //         if (!_.isEqual(actual, expected)) {
+    //             tip_3_2.suggestion = 'The output should be ' + expected + ';';
+    //             tip_3_2.suggestion += ' but was ' + actual + '.';
+    //             return false;
+    //         }
+    //         return true;
+    //     },
+    //     4 * 1000, // 4 second time out.
+    //     true, // is isolated
+    //     1 // points
+    // );
 
-    var tip_3_3 = chunk_3.newTip(
-        'Your block should return the correct values for the given edge case inputs.',
-        'Great job! Your block reports the correct value for given inputs.'
-    );
+    // var tip_3_3 = chunk_3.newTip(
+    //     'Your block should return the correct values for the given edge case inputs.',
+    //     'Great job! Your block reports the correct value for given inputs.'
+    // );
 
-    var input_3_2_3 = [];
-    tip_3_3.newIOTest('r',  // testClass
-        blockName_3,          // blockSpec
-        input_3_2_3,        // input
-        function (output) {
-            // Output should be a list of numbers.
-            var expected,
-                actual;
-            console.log(output);
+    // var input_3_2_3 = [];
+    // tip_3_3.newIOTest('r',  // testClass
+    //     blockName_3,          // blockSpec
+    //     input_3_2_3,        // input
+    //     function (output) {
+    //         // Output should be a list of numbers.
+    //         var expected,
+    //             actual;
+    //         console.log(output);
 
-            expected = "";
-            actual = output;
-            if (!_.isEqual(actual, expected)) {
-                tip_3_3.suggestion = 'The output should be ' + expected + ';';
-                tip_3_3.suggestion += ' but was ' + actual + '.';
-                return false;
-            }
-            return true;
-        },
-        4 * 1000, // 4 second time out.
-        true, // is isolated
-        1 // points
-    );
+    //         expected = "";
+    //         actual = output;
+    //         if (!_.isEqual(actual, expected)) {
+    //             tip_3_3.suggestion = 'The output should be ' + expected + ';';
+    //             tip_3_3.suggestion += ' but was ' + actual + '.';
+    //             return false;
+    //         }
+    //         return true;
+    //     },
+    //     4 * 1000, // 4 second time out.
+    //     true, // is isolated
+    //     1 // points
+    // );
 
 
 
